@@ -39,11 +39,34 @@ foreach ($users as $user){
   } elseif ($user['gender'] == 'N'){
     print_r("Buongiorno" . " " . $user['name'] . " " . $user['surname'] . "\n");
   } else {
-    print_r("Registrare il/la cliente" . " " . $user['name'] . " " . $user['surname'] . " " . "associando il genere:\n-M per Maschile\n-F per Femminile\n-N per Non specificato");
+    print_r("Registrare il/la cliente" . " " . $user['name'] . " " . $user['surname'] . " " . "associando il genere:\n-M per Maschile\n-F per Femminile\n-N per Non specificato" . "\n");
   }
 };
 
+// Selfwork 5
 
+// Dato un array di numeri a scelta, scrivere un programma che calcoli la media solo dei numeri pari contenuti all’interno dell’array
+
+$numbers = [1, 3, 6, 7, 15, 32, 40, 51];
+
+$count = 0;
+$sum = 0;
+
+
+foreach ($numbers as $number){
+  if ($number % 2 == 0){
+    $sum += $number;
+    $count++;
+  };
+
+};
+
+if ($count > 0){
+  $media = $sum / $count;
+  echo "La media dei numeri pari è " . $media . "\n";
+} else {
+  echo "Non ci sono numeri pari nell'array." . "\n";
+};
 
 
 ?>
