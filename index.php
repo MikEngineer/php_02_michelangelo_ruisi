@@ -17,16 +17,33 @@ $users = [
   ['name' => 'Carla', 'surname' => 'Roma', 'gender' => '']
 ];
 
-for ($i = 0; $i < 6; $i++){
-    if($users[$i]['gender'] == 'M'){
-      print_r("Buongiorno Sig." . " " . $users[$i]['name'] . " " . $users[$i]['surname'] . "\n");
-    }elseif($users[$i]['gender'] == 'F'){
-      print_r("Buongiorno Sig.ra" . " " . $users[$i]['name'] . " " . $users[$i]['surname'] . "\n");
-    }elseif($users[$i]['gender'] == 'N'){
-      print_r("Buongiorno" . " " . $users[$i]['name'] . " " . $users[$i]['surname'] . "\n");
-    }else{
-      print_r("Registrare il/la cliente" . " " . $users[$i]['name'] . " " . $users[$i]['surname'] . " " . "associando il genere:\n-M per Maschile\n-F per Femminile\n-N per Non specificato");
-    }
+// for ($i = 0; $i < 6; $i++){
+//     if($users[$i]['gender'] == 'M'){
+//       print_r("Buongiorno Sig." . " " . $users[$i]['name'] . " " . $users[$i]['surname'] . "\n");
+//     }elseif($users[$i]['gender'] == 'F'){
+//       print_r("Buongiorno Sig.ra" . " " . $users[$i]['name'] . " " . $users[$i]['surname'] . "\n");
+//     }elseif($users[$i]['gender'] == 'N'){
+//       print_r("Buongiorno" . " " . $users[$i]['name'] . " " . $users[$i]['surname'] . "\n");
+//     }else{
+//       print_r("Registrare il/la cliente" . " " . $users[$i]['name'] . " " . $users[$i]['surname'] . " " . "associando il genere:\n-M per Maschile\n-F per Femminile\n-N per Non specificato");
+//     }
+// };
+
+// Correzione
+
+foreach ($users as $user){
+  if ($user['gender'] == 'M'){
+    print_r("Buongiorno Sig." . " " . $user['name'] . " " . $user['surname'] . "\n");
+  } elseif ($user['gender'] == 'F'){
+    print_r("Buongiorno Sig.ra" . " " . $user['name'] . " " . $user['surname'] . "\n");
+  } elseif ($user['gender'] == 'N'){
+    print_r("Buongiorno" . " " . $user['name'] . " " . $user['surname'] . "\n");
+  } else {
+    print_r("Registrare il/la cliente" . " " . $user['name'] . " " . $user['surname'] . " " . "associando il genere:\n-M per Maschile\n-F per Femminile\n-N per Non specificato");
+  }
 };
+
+
+
 
 ?>
